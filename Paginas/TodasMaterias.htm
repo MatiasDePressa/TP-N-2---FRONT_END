@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MODIFICACIÓN DE MATERIAS</title>
+    <title>TODAS LAS MATERIAS</title>
     <link rel="stylesheet" href="../Estilos/TodasMaterias.css">
 </head>
 <body>
@@ -21,16 +21,41 @@
                     <th>División</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="materias-list">
+                <!-- Las materias serán insertadas aquí -->
             </tbody>
         </table>
+        <p>Total de materias: <span id="total-materias">0</span></p>
     </form>
     
     <footer>
         <hr>
         <p><b>E.E.S.T N°6 CHACABUCO – MORÓN (7° 4° año 2024)</b></p>
         <p>Proyecto de Implementación de sitios web dinámicos</p>
-        <p>Autores: Sebriano, Matos, De Pressa, </p>
+        <p>Autores: Sebriano, Matos, De Pressa</p>
     </footer>
+
+    <script>
+        fetch('../BaseDeDatos/Base.json')
+            .then(response => response.json())
+            .then(materias => {
+                const tbody = document.getElementById('materias-list');
+                const totalMateriasSpan = document.getElementById('total-materias');
+                
+                materias.forEach(materia => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${materia.nro}</td>
+                        <td>${materia.nombre}</td>
+                        <td>${materia.año}</td>
+                        <td>${materia.división}</td>
+                    `;
+                    tbody.appendChild(row);
+                });
+
+                totalMateriasSpan.textContent = materias.length;
+            })
+            .catch(error => console.error('Error al cargar las materias:', error));
+    </script>
 </body>
 </html>

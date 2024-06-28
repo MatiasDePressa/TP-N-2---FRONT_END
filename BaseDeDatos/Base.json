@@ -1,0 +1,62 @@
+[
+    {
+        "nro": 1,
+        "nombre": "Matemáticas",
+        "año": "1°",
+        "división": "A"
+    },
+    {
+        "nro": 2,
+        "nombre": "Ciencias",
+        "año": "1°",
+        "división": "B"
+    },
+    {
+        "nro": 3,
+        "nombre": "Historia",
+        "año": "2°",
+        "división": "A"
+    },
+    {
+        "nro": 4,
+        "nombre": "Geografía",
+        "año": "2°",
+        "división": "B"
+    },
+    {
+        "nro": 5,
+        "nombre": "Lengua y Literatura",
+        "año": "3°",
+        "división": "A"
+    },
+    {
+        "nro": 6,
+        "nombre": "Biología",
+        "año": "3°",
+        "división": "B"
+    },
+    {
+        "nro": 7,
+        "nombre": "Física",
+        "año": "4°",
+        "división": "A"
+    },
+    {
+        "nro": 8,
+        "nombre": "Química",
+        "año": "4°",
+        "división": "B"
+    },
+    {
+        "nro": 9,
+        "nombre": "Educación Física",
+        "año": "1°",
+        "división": "A"
+    },
+    {
+        "nro": 10,
+        "nombre": "Educación Artística",
+        "año": "2°",
+        "división": "B"
+    }
+]
