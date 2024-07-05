@@ -22,40 +22,19 @@
                 </tr>
             </thead>
             <tbody id="materias-list">
-                <!-- Las materias serán insertadas aquí -->
+                <!-- Las materias se mostraran aca -->
             </tbody>
         </table>
-        <p>Total de materias: <span id="total-materias">0</span></p>
+        <p id="contador-materias">Total de materias: <span id="total-materias">0</span></p>
     </form>
     
     <footer>
         <hr>
         <p><b>E.E.S.T N°6 CHACABUCO – MORÓN (7° 4° año 2024)</b></p>
         <p>Proyecto de Implementación de sitios web dinámicos</p>
-        <p>Autores: Sebriano, Matos, De Pressa</p>
+        <p>Autores: Alarcon - Baez - Cabrera - Iacobacci - Cajal - Cari - Casagerone - Castellano - Corbalan - Cuba - Datri - Dangelo - De pressa - Dicerbo - Dominguez - Donnarumma - Eiras - Francisco - Gallardo - Garcia - Iannone - Ledesma - Leyes - Lezcano - ;Loiacono - Lucero - Lujan - Luque - Marrapodi - Matos - Mosquera - Pavon - Portillo - Potaschnik - Romero - Salmeron - Scaramuzza - Sebriano A. - Sebriano E. - Speranza</p>
     </footer>
 
-    <script>
-        fetch('../BaseDeDatos/Base.json')
-            .then(response => response.json())
-            .then(materias => {
-                const tbody = document.getElementById('materias-list');
-                const totalMateriasSpan = document.getElementById('total-materias');
-                
-                materias.forEach(materia => {
-                    const row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td>${materia.nro}</td>
-                        <td>${materia.nombre}</td>
-                        <td>${materia.año}</td>
-                        <td>${materia.división}</td>
-                    `;
-                    tbody.appendChild(row);
-                });
-
-                totalMateriasSpan.textContent = materias.length;
-            })
-            .catch(error => console.error('Error al cargar las materias:', error));
-    </script>
+    <script src="../Scripts/TodasMaterias.Js"></script>
 </body>
 </html>

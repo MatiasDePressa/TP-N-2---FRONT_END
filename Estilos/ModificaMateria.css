@@ -30,6 +30,11 @@ td, th, caption{
 th {
     background-color: rgb(235,235,235);
   }
+.buttons{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
 footer{
     background-color:rgb(26, 26, 26);
     color: white;
